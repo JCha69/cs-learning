@@ -1,0 +1,10 @@
+grocery = ["milk", "eggs", "bread"]
+
+print(len(grocery))
+
+for x in grocery:
+    print("- %s" % x)
+
+grocery.append("bananas")
+
+print(grocery)
