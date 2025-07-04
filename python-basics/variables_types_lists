@@ -1,10 +1,73 @@
+# Problem 1 (Easy)
+
+# creates the grocery list
 grocery = ["milk", "eggs", "bread"]
 
+# prints the length of the list
 print(len(grocery))
 
-for x in grocery:
-    print("- %s" % x)
+# prints each item in a bulletpoint
+for item in grocery:
+    print("- %s" % item)
 
+# appends a new item
 grocery.append("bananas")
 
+# prints the updated list
 print(grocery)
+
+
+# Problem 2 (Medium)
+
+# creates the list for names and scores
+names = ["James", "Kate", "Josh", "Aiden", "Mia"]
+scores = [80, 94, 25, 100, 79]
+
+# prints each student's name and score
+for name, score in zip(names, scores):
+    print(f"{name} got {score}")
+
+# prints the average score of the class
+totalScore = 0
+
+for score in scores:
+    totalScore += score
+
+average = totalScore / len(scores)
+
+print(average)
+
+# prints the number of students who scored above 80
+above80 = 0
+
+for score in scores:
+    if score >= 80 : above80 += 1
+
+print(above80)
+
+# Problem 3 (Hard)
+
+# for each name, print the length of the name and wheter the name contains "a"
+tof = "Yes"
+
+for name in names:
+    if name.lower().find("a") != -1 : 
+        tof = "Yes"
+    else :
+        tof = "No"
+    print(f"{name} - {len(name)} letters - contains 'a' : {tof}")
+
+# count how many names have more than 4 letters & contain the letter "j"
+moreThan4 = 0
+containsJ = 0
+
+for name in names:
+    if len(name) > 4 : 
+        moreThan4 += 1
+    if name.lower().find("j") != -1 :
+        containsJ += 1
+
+print(f"Names with more than 4 letters : {moreThan4}")
+print(f"Names containing 'j' : {containsJ}")
+
+
